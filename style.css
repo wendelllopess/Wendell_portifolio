@@ -1,22 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
 }
-:root{
+
+:root {
     --cor-azul: #0A1A3C;
     --cor-branco: #FBFBFB;
     --cor-laranja: #FF7F50;
 
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
-    background-color: #0A1A3C;
 }
 
-header{
-    border: 1px solid red;
+header {
+ 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,32 +28,163 @@ header{
     width: 100%;
     height: 60px;
     background-color: var(--cor-azul);
-    padding: 0 50px; /*Verificar se vai ser necessario*/
+    padding: 2px 55px; /*Verificar se vai ser necessario*/
     z-index: 1;
 }
 
-h1{
+h1 {
+    color: var(--cor-laranja);
+    font-family: "Port Lligat Slab", serif;
+
+}
+
+nav{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+   
+}
+nav a {
+    position: relative;
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing:2px ;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: color 0.5s ease;
+
+}
+
+nav a:hover{
     color: var(--cor-laranja);
 }
-
-a{
-    color: var(--cor-branco);
+nav a::after{
+    content: ''; 
+    position: absolute;
+    left: 0; 
+    bottom: 0; 
+    width: 0; 
+    height: 2px; /* Espessura da linha */
+    background-color: var(--cor-laranja); /* Cor da linha */
+    transition: width 0.3s  ease;
 }
 
-main{
-margin-top: 60px;
-
+nav a:hover::after{
+    width: 100%;
 }
 
-section.inicio{
+
+.btnContato{
+   background-color: var(--cor-laranja);
+   border: none;
+   border-radius: 12px;
+   font-size: 1.1rem;
+   font-weight: 400;
+   padding: 7px;
+   text-decoration: none;
+   color: var(--cor-azul);
+   transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+.btnContato:hover::after{
+    width: 0;
+}
+.btnContato:hover {
+    background-color: var(--cor-azul); 
+    color: var(--cor-laranja); 
+    border: 1px solid var(--cor-laranja);
+}
+
+
+
+main {
+    margin-top: 60px;
+    height: 100vh;
+    text-align: center; /*ver se isso nao vai interferia nas outras coisa*/
+   
+}
+
+section.inicio {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    height: 60%;
     background-color: var(--cor-azul);
 }
-
-section.servicos{
-    background-color: var(--cor-branco);
+section.inicio .textos{
+    
+    height: 50%;
+    width: 50%;
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    color: var(--cor-branco);
+    letter-spacing: 2px;
+    margin-left: 2px;
 }
+
+section.inicio .textos h3{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+section.inicio .textos h2{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--cor-laranja);
+}
+section.inicio .textos p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+section.inicio .foto{
+    border: 3px solid var(--cor-laranja);
+    border-radius: 100%;
+    padding: 12px 12px 0 12px;
+    margin-top: 20px;
+    height: auto;
+    width: auto;
+}
+
+section.servicos {
+    background-color: var(--cor-branco);
+    height: 100%;   
+   
+}
+
+section.servicos img {
+
+    width: 100%;
+    height: auto;
+}
+
+section.servicos h2 {
+    border: 1px solid yellow;
+    text-align: center;
+    margin-top: -6rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--cor-azul);
+}
+
+section.tecnologia{
+    background-color: var(--cor-branco);
+    height: 100%;  
+
+}
+
+section.tecnologia h2{
+
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--cor-azul);
+}
+
 
