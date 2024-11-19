@@ -226,6 +226,7 @@ section.servicos .containerServicos img {
 section.tecnologia {
     background-color: var(--cor-branco);
     height: 50%;
+    padding: 60px 0;
 
 }
 
@@ -258,4 +259,18 @@ section.tecnologia .boxTecnologia{
 section.tecnologia .boxTecnologia img {
     height: 80px;
     width: 80px;
+}
+
+section.projetos{
+    background-color: var(--cor-azul);
+    height: 100%;
+    padding: 60px 0 ;
+}
+
+section.projetos h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--cor-laranja);
 }
