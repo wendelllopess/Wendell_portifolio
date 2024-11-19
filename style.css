@@ -264,10 +264,46 @@ section.tecnologia .boxTecnologia img {
 section.projetos{
     background-color: var(--cor-azul);
     height: 100%;
-    padding: 60px 0 ;
+    padding: 60px 0;
 }
 
 section.projetos h2{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--cor-laranja);
+}
+
+section.sobre{
+    background-color: var(--cor-azul);
+    height: 100%;
+    padding: 60px 0;
+    
+}
+section.sobre .containerSobre{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+section.sobre .textoSobre{
+    border: 1px solid red;
+    width: 50%;
+}
+
+section.sobre .imageSobre{
+    border: 1px solid white;
+    width: 50%;
+}
+
+
+section.sobre p{
+    color: var(--cor-branco);
+
+}
+
+section.sobre h2{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
