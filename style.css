@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 
 }
 
@@ -19,7 +20,7 @@ body {
 }
 
 header {
- 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +29,8 @@ header {
     width: 100%;
     height: 60px;
     background-color: var(--cor-azul);
-    padding: 2px 55px; /*Verificar se vai ser necessario*/
+    padding: 2px 55px;
+    /*Verificar se vai ser necessario*/
     z-index: 1;
 }
 
@@ -38,63 +40,70 @@ h1 {
 
 }
 
-nav{
-   
+nav {
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
-   
+
 }
+
 nav a {
     position: relative;
     color: var(--cor-branco);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 400;
-    letter-spacing:2px ;
+    letter-spacing: 2px;
     padding: 5px 0;
     cursor: pointer;
     transition: color 0.5s ease;
 
 }
 
-nav a:hover{
+nav a:hover {
     color: var(--cor-laranja);
 }
-nav a::after{
-    content: ''; 
+
+nav a::after {
+    content: '';
     position: absolute;
-    left: 0; 
-    bottom: 0; 
-    width: 0; 
-    height: 2px; /* Espessura da linha */
-    background-color: var(--cor-laranja); /* Cor da linha */
-    transition: width 0.3s  ease;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    /* Espessura da linha */
+    background-color: var(--cor-laranja);
+    /* Cor da linha */
+    transition: width 0.3s ease;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     width: 100%;
 }
 
 
-.btnContato{
-   background-color: var(--cor-laranja);
-   border: none;
-   border-radius: 12px;
-   font-size: 1.1rem;
-   font-weight: 400;
-   padding: 7px;
-   text-decoration: none;
-   color: var(--cor-azul);
-   transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+.btnContato {
+    background-color: var(--cor-laranja);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 7px;
+    text-decoration: none;
+    color: var(--cor-azul);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Transição suave */
 }
-.btnContato:hover::after{
+
+.btnContato:hover::after {
     width: 0;
 }
+
 .btnContato:hover {
-    background-color: var(--cor-azul); 
-    color: var(--cor-laranja); 
+    background-color: var(--cor-azul);
+    color: var(--cor-laranja);
     border: 1px solid var(--cor-laranja);
 }
 
@@ -103,22 +112,23 @@ nav a:hover::after{
 main {
     margin-top: 60px;
     height: 100vh;
-    text-align: center; /*ver se isso nao vai interferia nas outras coisa*/
-   
+    text-align: center;
+    /*ver se isso nao vai interferia nas outras coisa*/
+
 }
 
 section.inicio {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 60%;
+    height: 70%;
     background-color: var(--cor-azul);
 }
-section.inicio .textos{
-    
+
+section.inicio .textos {
     height: 50%;
     width: 50%;
-    display: flex;;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 18px;
@@ -127,43 +137,43 @@ section.inicio .textos{
     margin-left: 2px;
 }
 
-section.inicio .textos h3{
+section.inicio .textos h3 {
     font-size: 1.3rem;
     font-weight: 300;
 }
-section.inicio .textos h2{
+
+section.inicio .textos h2 {
     font-size: 2rem;
     font-weight: 500;
     color: var(--cor-laranja);
 }
-section.inicio .textos p{
+
+section.inicio .textos p {
     font-size: 1rem;
     font-weight: 300;
 }
 
-section.inicio .foto{
+section.inicio .foto {
     border: 3px solid var(--cor-laranja);
     border-radius: 100%;
     padding: 12px 12px 0 12px;
-    margin-top: 20px;
+    margin-top: 12px;
     height: auto;
     width: auto;
 }
 
 section.servicos {
     background-color: var(--cor-branco);
-    height: 100%;   
-   
+    height: 100%;
+
 }
 
 section.servicos img {
-
     width: 100%;
     height: auto;
 }
 
 section.servicos h2 {
-    border: 1px solid yellow;
     text-align: center;
     margin-top: -6rem;
     font-size: 1.5rem;
@@ -172,13 +182,54 @@ section.servicos h2 {
     color: var(--cor-azul);
 }
 
-section.tecnologia{
-    background-color: var(--cor-branco);
-    height: 100%;  
+section.servicos .containerServicos {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 }
 
-section.tecnologia h2{
+section.servicos .boxServicos {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    border: 1px solid var(--cor-azul);
+    border-radius: 16px;
+    transition: transform .4s ease-in-out;
+}
+
+section.servicos .boxServicos:hover{
+    border-color: #FF7F50;
+    transform: scale(1.1);
+}
+
+section.servicos .servicosDescricao {
+    text-align: center;
+}
+
+section.servicos .servicosDescricao p {
+    color: var(--cor-azul);
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+section.servicos .containerServicos img {
+    height: 120px;
+    width: 120px;
+}
+
+section.tecnologia {
+    background-color: var(--cor-branco);
+    height: 50%;
+
+}
+
+section.tecnologia h2 {
 
     text-align: center;
     font-size: 1.5rem;
@@ -187,4 +238,24 @@ section.tecnologia h2{
     color: var(--cor-azul);
 }
 
+section.tecnologia .containerTecnologia{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
 
+}
+
+section.tecnologia .boxTecnologia{
+    border: 1px solid var(--cor-azul);
+    padding: 14px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+section.tecnologia .boxTecnologia img {
+    height: 80px;
+    width: 80px;
+}
